@@ -1,0 +1,57 @@
+include modules/apps/*.conf
+include modules/containers.conf
+include modules/workspaces.conf
+include modules/windows.conf
+
+# Resources definition
+set_from_resource $NORD0 nord0
+set_from_resource $NORD1 nord1
+set_from_resource $NORD2 nord2
+set_from_resource $NORD3 nord3
+set_from_resource $NORD4 nord4
+set_from_resource $NORD5 nord5
+set_from_resource $NORD6 nord6
+set_from_resource $NORD7 nord7
+set_from_resource $NORD8 nord8
+set_from_resource $NORD9 nord9
+set_from_resource $NORD10 nord10
+set_from_resource $NORD11 nord11
+set_from_resource $NORD12 nord12
+set_from_resource $NORD13 nord13
+set_from_resource $NORD14 nord14
+set_from_resource $NORD15 nord15
+
+# Shortcuts definition
+set $MOD Mod4
+
+set $LEFT h
+set $DOWN j
+set $UP k
+set $RIGHT l
+
+# Reload configuration file
+bindsym $MOD+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $MOD+Shift+r restart
+
+# Exit i3 (logs you out of your X session)
+bindsym $MOD+Shift+e exec "i3-nagbar -t warning -f 'pango:Rajdhani Semibold 9' -m 'Exit i3wm?' -b 'Confirm' 'i3-msg exit'"
+
+# Mouse hovering (disabled)
+focus_follows_mouse no
+
+# NumLock auto-enabled (numlockx)
+exec_always --no-startup-id numlockx on
+
+# Terminal
+bindsym $MOD+Return exec i3-sensible-terminal
+
+# Rofi
+bindsym $MOD+d exec $HOME/.config/rofi/launchers/type-1/launcher.sh
+
+# Desktop wallpaper
+exec_always --no-startup-id $HOME/.config/i3/scripts/wallpaper.sh
+
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/main.sh
