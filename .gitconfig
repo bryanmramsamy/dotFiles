@@ -6,5 +6,4 @@
 [alias]
 	pushall = !git remote | xargs -L1 git push --all
 	pushbranchall = !git remote | xargs -L1 -I R git push R
-	deletebranchall = "!f() { branch=$1; git remote | xargs -L1 -I R git push R --delete $branch; }; f"
-
+	deletebranchall = "!f() { for branch in \"$@\"; do git remote | xargs -I R git push R --delete $branch; done; }; f"
