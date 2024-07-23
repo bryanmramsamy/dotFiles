@@ -1,9 +1,10 @@
-[bryan]
 [user]
-  email = rainbow_delta@outlook.com
-  name = Bryan M. Ramsamy
+	email = rainbow_delta@outlook.com
+	name = Bryan M. Ramsamy
 [core]
-  editor = vim
+	editor = vim
 [alias]
-  pushall = !git remote | xargs -L1 git push --all
-  pushbranchall = !git remote | xargs -L1 -I R git push R
+	pushall = !git remote | xargs -L1 git push --all
+	pushbranchall = !git remote | xargs -L1 -I R git push R
+	deletebranchall = "!f() { branch=$1; git remote | xargs -L1 -I R git push R --delete $branch; }; f"
+
