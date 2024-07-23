@@ -10,6 +10,8 @@ map <S-J> <C-W>J
 map <S-K> <C-W>K
 map <S-L> <C-W>L
 
+map <silent> <C-n> :NERDTreeFocus<CR>
+
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16_default'
@@ -21,11 +23,10 @@ set nu
 call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'frazrepo/vim-rainbow'
-  Plug 'jampow/vim-arc-dark-theme'
+  Plug 'nordtheme/vim'
   Plug 'preservim/nerdtree'
-  Plug 'tpope/vim-commentary'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
-colorscheme arc-dark
+colorscheme nord
