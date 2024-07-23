@@ -1,0 +1,43 @@
+! To reload .Xresources file: "xrdb ~/.Xresources"
+
+! NORD THEME
+
+#define NORD0 #2E3440
+#define NORD1 #3B4252
+#define NORD2 #434C5E
+#define NORD3 #4C566A
+#define NORD4 #D8DEE9
+#define NORD5 #E5E9F0
+#define NORD6 #ECEFF4
+#define NORD7 #8FBCBB
+#define NORD8 #88C0D0
+#define NORD9 #81A1C1
+#define NORD10 #5E81AC
+#define NORD11 #BF616A
+#define NORD12 #D08770
+#define NORD13 #EBCB8B
+#define NORD14 #A3BE8C
+#define NORD15 #B48EAD
+
+*.foreground: NORD4
+*.background: NORD0
+*.cursorColor: NORD4
+*fading: 35
+*fadeColor: NORD3
+
+*.nord0: NORD0
+*.nord1: NORD1
+*.nord2: NORD2
+*.nord3: NORD3
+*.nord4: NORD4
+*.nord5: NORD5
+*.nord6: NORD6
+*.nord7: NORD7
+*.nord8: NORD8
+*.nord9: NORD9
+*.nord10: NORD10
+*.nord11: NORD11
+*.nord12: NORD12
+*.nord13: NORD13
+*.nord14: NORD14
+*.nord15: NORD15
