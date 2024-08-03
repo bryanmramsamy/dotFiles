@@ -3,6 +3,12 @@ include modules/containers.conf
 include modules/workspaces.conf
 include modules/windows.conf
 
+# Load Xresources
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+
+# Screenlayout
+exec_always --no-startup-id $HOME/.config/i3/scripts/screenlayout.sh
+
 # Resources definition
 set_from_resource $NORD0 nord0
 set_from_resource $NORD1 nord1
