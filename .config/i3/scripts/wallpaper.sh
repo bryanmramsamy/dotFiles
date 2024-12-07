@@ -3,6 +3,12 @@
 # Path to the wallpaper directory
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
+# Check if the wallpaper directory exists and is not empty
+if [ ! -d "$WALLPAPER_DIR" ] || [ -z "$(ls -A "$WALLPAPER_DIR")" ]; then
+  echo "Error: Wallpaper directory does not exist or is empty."
+  exit 1
+fi
+
 # Get the list of connected monitors, excluding the first line
 monitors=$(xrandr --listactivemonitors | tail -n +2 | grep -Eo ' [^ ]+$')
 
