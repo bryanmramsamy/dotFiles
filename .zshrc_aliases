@@ -1,0 +1,8 @@
+alias full_update='zsh ~/bin/config/full_update'
+alias gnome_settings='XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias zsh_history_fix='zsh ~bin/config/zsh_history_fix'
